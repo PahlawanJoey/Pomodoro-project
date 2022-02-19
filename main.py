@@ -25,9 +25,9 @@ def reset_timer():
 def start_timer():
     global reps
     reps += 1
-    work_sec = round(WORK_MIN * 0.5)
-    short_break_sec = SHORT_BREAK_MIN * 1
-    long_break_sec = round(LONG_BREAK_MIN * 0.5)
+    work_sec = WORK_MIN * 60
+    short_break_sec = SHORT_BREAK_MIN * 60
+    long_break_sec = LONG_BREAK_MIN * 60
     window.attributes('-topmost', 1)
     if reps % 8 == 0:
         timer_text.config(text="Break", fg=RED)
